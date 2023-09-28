@@ -50,7 +50,8 @@ echo "Filter sequences with less than 10 and 20 Phred scores"
 
 
 ##Eliminate sequences where there is a sinlge Phred score below 10 and then sequences where 5% of reads have a with Phred quality scores below 20
-# label of "tff" indicates that the second round of quality filtering is completed
+
+label of "tff" indicates that the second round of quality filtering is completed
 
 #100% of the bases in a sequence must have a score of higher than 10 for the sequence to be kept
 fastq_quality_filter -q 10 -p 100 -Q33 -i /blue/robinson/ldmontalvo/wrens_1/AS_LDM1_t.fastq -o /blue/robinson/ldmontalvo/wrens_1/AS_LDM1_tf.fastq &
@@ -170,10 +171,10 @@ mkdir /blue/robinson/ldmontalvo/wrens_1/denovo_run1
 denovo_map.pl --samples /blue/robinson/ldmontalvo/wrens_1/demultfilter --popmap /blue/robinson/ldmontalvo/wrens_1/popmap_wren_test.txt -m 3 -M 1 -n 1 -T 15 -o /blue/robinson/ldmontalvo/wrens_1/denovo_run1
 populations -P /blue/robinson/ldmontalvo/wrens_1/denovo_run1 -M /blue/robinson/ldmontalvo/wrens_1/popmap_wren_test.txt -t 15 -r 0.8
 
-# note -T or -t = # of threads/CPUs to use
-# for populations: -P = path to directory containing the Stacks files (output from the denovo run)
-#                  -M = path to the population map (in thsi case same as used in the denovo trial)
-#                  -r = minimum percentage of individuals in a population req to have a locus to process the locus
+#note -T or -t = # of threads/CPUs to use
+#for populations: -P = path to directory containing the Stacks files (output from the denovo run)
+#-M = path to the population map (in thsi case same as used in the denovo trial)
+#-r = minimum percentage of individuals in a population req to have a locus to process the locus
 
 ##Run 2
 mkdir /blue/robinson/ldmontalvo/wrens_1/denovo_run2
