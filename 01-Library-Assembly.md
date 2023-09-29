@@ -273,7 +273,7 @@ for (i in files[1:9]){
 
 #total_count.tsv is used to display total SNP by parameter.
 
-# Figure 5
+#Figure 5
 library(ggplot2)
 snp_count<-read.delim("total_count.tsv", sep=" ", header=F)	
 names(snp_count)<-c("m", "n_snps")
@@ -281,7 +281,7 @@ snp_count$m<-as.factor(snp_count$m)
 p <- ggplot(data=snp_count, aes(x=m, y=n_snps))
 p + geom_point(size=4)
 
-# Figure 6
+#Figure 6
 snp_table<-read.delim("distributions.tsv", sep=" ", header=F)
 names(snp_table)<- c("n_snps","n_loci", "n_loci_percent", "m") 
 snp_table$n_loci_percent<-snp_table$n_loci_percent*100
@@ -298,6 +298,9 @@ q
 
 
 
+
+![Slide1](https://github.com/ldmontalvo/Landscape-Genomic-Wrens/assets/67880755/16b659cd-fb98-4f87-8720-642fbeff06cb)
+![Slide2](https://github.com/ldmontalvo/Landscape-Genomic-Wrens/assets/67880755/04a7e7eb-a6fd-42b2-b2aa-a2df52deb35e)
 
 
 
